@@ -1,0 +1,125 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+*::before{box-sizing: border-box;}
+*::after{box-sizing: border-box;}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	background: #FEE433;
+}
+.wrapper{
+	width: 100%;
+	height: 196px;
+	position: relative;
+}
+.nose{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px;
+	border-color: black transparent transparent;
+	border-radius: 11px;
+	position: absolute;
+	top: 28px;
+	left: 50%;
+	margin-left: -12px;
+}
+.eye{
+	width: 49px;
+	height: 49px;
+	background: #2E2E2E;
+	position: absolute;
+	border-radius: 50%;
+	border: 2px solid #000000;
+}
+.eye::before{
+	content: '';
+	display: block;
+	width: 26px;
+	height: 26px;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	left: 5px;
+	top: 0px;
+	border: 2px solid #000;
+}
+.eye.left{
+	right: 50%;
+	margin-right: 80px;
+}
+.eye.right{
+	left: 50%;
+	margin-left: 80px;
+}
+.face{
+	width: 68px;
+	height: 68px;
+	background: #FC0D1C;
+	border: 3px solid black;
+	border-radius: 50%;
+	position: absolute;
+	top: 88px;
+}
+.face.left{
+	right: 50%;
+	margin-right: 110px;
+}
+.face.right{
+	left: 50%;
+	margin-left: 110px;
+}
+.upperLip{
+	height: 25px;
+	width: 80px;
+	border: 3px solid black;
+	border-top: none;
+	position: absolute;
+	top: 48px;
+	background: #FEE433;
+}
+.upperLip.left{
+	border-bottom-left-radius: 40px 25px;
+	border-right: none;
+	transform: rotate(-20deg);
+	right: 50%;
+}
+.upperLip.right{
+	border-bottom-right-radius: 40px 25px;
+	border-left: none;
+	transform: rotate(20deg);
+	left: 50%;
+}
+.lowerLip-wrapper{
+	width: 180px;
+	height: 140px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -90px;
+	z-index: -1;
+	overflow: hidden;
+}
+.lowerLip{
+	width: 180px;
+	height: 2000px;
+	background: #990513;
+	border: 3px solid black;
+	border-radius: 200px/1000px;
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+}
+.lowerLip::after{
+	content: '';
+	width: 110px;
+	height: 110px;
+	background: #FC4A62;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -55px;
+	border-radius: 55px;
+
+}
